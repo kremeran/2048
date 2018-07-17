@@ -1,6 +1,13 @@
 ## Bug Solutions
-1. This bug is found in the two lines of code 
-  ```
-  mvwprintw(stats_win, 2, 1, "%d", stats->score);
-   mvwprintw(stats_win, 5, 1, "%d", stats->max_score);
-  ```
+1. Correct data but incorrect rendering
+Incorrect code:
+```
+mvwprintw(stats_win, 2, 1, "%d", stats->score);
+mvwprintw(stats_win, 5, 1, "%d", stats->max_score);
+```
+Which should be corrected to:
+```
+mvwprintw(stats_win, 2, 1, "%8d", stats->score);
+mvwprintw(stats_win, 5, 1, "%8d", stats->max_score);
+```
+The correctly formatted string repaints the full 8 character positions instead of only whats necessary for the number.
