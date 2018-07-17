@@ -1,5 +1,5 @@
 ## Bug Solutions
-1. Correct data but incorrect rendering
+### 1. Correct data but incorrect rendering
 Incorrect code:
 ```
 mvwprintw(stats_win, 2, 1, "%d", stats->score);
