@@ -2,8 +2,8 @@ TARGET?=2048
 SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
 CC = gcc #green hills compiler
-CFLAGS?=  #flags to enbale history
-LDLIBS=-lncurses #enables ghs eagle
+CFLAGS?= -Xprologue_epilogue_hooks_noinline -DGHS_FEE_COLLECT -G #flags to enbale history
+LDLIBS=-lncurses -lghseagle #enables ghs eagle
 DESTDIR?=/usr/local/bin
 
 .PHONY: all install clean
