@@ -13,10 +13,6 @@ all: $(TARGET)
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET) $(LDLIBS)
 
-
-install:
-	@-install -m 755 $(TARGET) $(DESTDIR)
-
 clean:
 	@-rm -f $(TARGET) $(OBJ)
 

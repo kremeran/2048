@@ -86,12 +86,14 @@ err:
 
 static int get_filename(void)
 {
-	char *home = getenv("HOME");
+	char home[1024];
+	getcwd(home, sizeof(home));
+	printf("%s  %d\n", home, strlen(home));
 	if (!home || strlen(home) > PATH_LEN-7)
 		return -1;
 
 	strcpy(filename, home);
-	strcat(filename, "/.2048");
+	strcat(filename, "/savegame");
 	return 0;
 }
 
