@@ -1,7 +1,7 @@
 #ifndef COMMON_H
 #define COMMON_H
 
-#define BOARD_SIZE  4
+#define BOARD_SIZE 4
 #define BOARD_TILES (BOARD_SIZE * BOARD_SIZE)
 
 /* Each tile is represented as power of two,

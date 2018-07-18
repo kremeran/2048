@@ -66,8 +66,8 @@ int main(void)
 
 	sigprocmask(SIG_UNBLOCK, &all_signals, NULL);
 
-	int ch;
-	while ((ch = getch()) != 'q' && ch != 'Q') {
+	int ch = 0;
+	while ((ch == getch()) != 'q' && ch != 'Q') {
 		Dir dir;
 		Board new_board;
 		Board moves;

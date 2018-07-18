@@ -88,7 +88,6 @@ static int get_filename(void)
 {
 	char home[1024];
 	getcwd(home, sizeof(home));
-	printf("%s  %d\n", home, strlen(home));
 	if (!home || strlen(home) > PATH_LEN-7)
 		return -1;
 
