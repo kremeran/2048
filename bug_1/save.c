@@ -13,6 +13,7 @@
 
 #define MAX_POSSIBLE_SCORE  3932156
 #define MAX_POSSIBLE_TILE   17
+#define F_OFFSET -4
 
 static char filename[PATH_LEN] = "";
 static int  fd = -1;
@@ -27,7 +28,6 @@ int load_game(Board *board, Stats *stats)
 
 	if (get_filename() == -1)
 		return -1;
-	//printf("%s\n",filename);
 	fd = open(filename, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 		return -1;
@@ -64,10 +64,7 @@ int save_game(const Board *board, const Stats *stats)
 	if (fd == -1 || !stats->auto_save)
 		return -1;
 
-	off_t off;
-	off = lseek(fd, 0, SEEK_SET);
-	if (off == -1)
-		return -1;
+	lseek(fd, F_OFFSET, SEEK_SET);
 
 	ssize_t s;
 	s = write(fd, &stats->score,     sizeof(int));
