@@ -1,6 +1,16 @@
 ## Bug Solutions
+### 1. Program hangs upon startup
+The main while loop to run the game has a comparator instead of an assignment.
+Incorrect code in main.c
+```
+while ((ch == getch()) != 'q' && ch != 'Q') {
+```
+Which should be corrected to
+```
+while ((ch = getch()) != 'q' && ch != 'Q') {
+```
 
-### 1. Saves game incorrectly
+### 2. Saves game incorrectly
 The lseek() function repositions the offset of the open file associated with the file descriptor. SEEK_SET moves it to the offset. SEEK_CUR sets it to the current location plus the offset.
 Incorrect code in save.c
 ```
@@ -10,7 +20,7 @@ Which should be corrected to
 ```
 lseek(fd, 0, SEEK_SET);
 ```
-### 2. Correct data but incorrect rendering
+### 3. Correct data but incorrect rendering
 The correctly formatted string repaints the full 8 character positions instead of only whats necessary for the number.
 Incorrect code in draw.c
 ```
