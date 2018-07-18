@@ -42,6 +42,11 @@
 *.idb
 *.pdb
 
+# GHS
+*.dbo
+*.dla
+*.dnm
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
