@@ -9,7 +9,16 @@ Which should be corrected to
 ```
 while ((ch = getch()) != 'q' && ch != 'Q') {
 ```
-
+### 2. Program crashes upon game movement
+When a new tile is randomly added to the board a value of "2" or "4" is written to the gameboard. The value is initialized as a float when it should be initialized as an int. The display tries to find the correct color index which is now out of bounds resulting in a seg fault. 
+Incorrect code in board.c
+```
+float val;
+```
+Which should be corrected to
+```
+int val;
+```
 ### 2. Saves game incorrectly
 The lseek() function repositions the offset of the open file associated with the file descriptor. SEEK_SET moves it to the offset. SEEK_CUR sets it to the current location plus the offset.
 Incorrect code in save.c
