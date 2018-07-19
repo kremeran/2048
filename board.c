@@ -21,7 +21,7 @@ void board_add_tile(Board *board, bool only2)
 {
 	Coord empty[BOARD_TILES];
 	int empty_n = 0;
-	int val;
+	float val;
 
 	if (only2) {
 		val = 1;
@@ -44,7 +44,7 @@ void board_add_tile(Board *board, bool only2)
 		int r = rand() % empty_n;
 		int x = empty[r].x;
 		int y = empty[r].y;
-		board->tiles[y][x] = val;
+		memcpy(&board->tiles[y][x], &val, sizeof(int));
 	}
 }
 
