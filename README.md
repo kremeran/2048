@@ -3,7 +3,7 @@
 
 `sudo apt-get install libncurses5-dev libncursesw5-dev`
 
-`make -f Makefile.ghs`
+`make`
 
 `./2048 or multi 2048`
 
@@ -11,7 +11,13 @@
 
 `sudo apt-get install libncurses5-dev libncursesw5-dev`
 
-`make -f Makefile.gdb`
+Update Makefile to this:
+```
+CFLAGS?= -g
+LDLIBS= -lncurses
+```
+
+`make`
 
 `./2048 or gdb 2048`
 
