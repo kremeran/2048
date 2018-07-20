@@ -31,7 +31,7 @@ Which should be corrected to
 for (int y = 0; y < BOARD_SIZE; y++) {
 		for (int x = 0; x < BOARD_SIZE; x++) {
 ```
-### 3. Saves game incorrectly
+### 4. Saves game incorrectly
 The lseek() function repositions the offset of the open file associated with the file descriptor. SEEK_SET moves it to the offset. SEEK_CUR sets it to the current location plus the offset.
 Incorrect code in save.c
 ```
@@ -41,7 +41,7 @@ Which should be corrected to
 ```
 lseek(fd, 0, SEEK_SET);
 ```
-### 4. Correct data but incorrect rendering
+### 5. Correct data but incorrect rendering
 The correctly formatted string repaints the full 8 character positions instead of only whats necessary for the number.
 Incorrect code in draw.c
 ```
