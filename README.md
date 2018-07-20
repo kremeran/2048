@@ -1,4 +1,4 @@
-## Build and install
+# Build Instructions
 To make and run with GHS tools
 
 ---
@@ -9,7 +9,7 @@ To make and run with GHS tools
 
 `./2048 or multi 2048`
 
-#### Bug Hunt
+# Bug Hunt
 At one point, this program was a fully functional game of 2048 
 
 1. The game stalls and does not react to any keyboard controls. You can only exit the game by using ctrl+c. You probably want to get this figured out first in order to reproduce any of the other bugs.
