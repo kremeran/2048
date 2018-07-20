@@ -1,24 +1,17 @@
 TARGET?=2048
 SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
-CC = gcc #green hills compiler
-CFLAGSGHS?= -Xprologue_epilogue_hooks_noinline -DGHS_FEE_COLLECT -G #flags to enbale history
-CFLAGSGDB?= -g
-LDLIBSGHS=-lncurses -lghseagle 
-LDLIBSGDB=-lncurses -lghseagle 
+CC = gcc 
+CFLAGS?= -Xprologue_epilogue_hooks_noinline -DGHS_FEE_COLLECT -G 
+LDLIBS=-lncurses -lghseagle 
 DESTDIR?=/usr/local/bin
 
-.PHONY: all install clean
+.PHONY: all clean
 
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGSGHS) $(OBJ) -o $(TARGET) $(LDLIBSGHS)
-
-gdb: $(TARGET)
-
-$(TARGET): $(OBJ)
-	$(CC) $(CFLAGSGDB) $(OBJ) -o $(TARGET) $(LDLIBSGDB)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET) $(LDLIBS)
 
 clean:
 	@-rm -f $(TARGET) $(OBJ)
