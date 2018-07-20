@@ -3,11 +3,17 @@
 
 `sudo apt-get install libncurses5-dev libncursesw5-dev`
 
-`make`
+`make -f Makefile.ghs`
 
 `./2048 or multi 2048`
 
 ### To make and run with gdb
+
+`sudo apt-get install libncurses5-dev libncursesw5-dev`
+
+`make -f Makefile.gdb`
+
+`./2048 or gdb 2048`
 
 # Bug Hunt
 At one point, this program was a fully functional game of 2048 
