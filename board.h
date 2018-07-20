@@ -10,7 +10,7 @@ void board_start(Board *board);
 
 /* Add tile in random position.
  * If 'only2' is false, the tile may be '2' or '4' */
-void board_add_tile(Board *board, bool only2);
+void board_add_tile(Board *board, int only2);
 
 /* Returns points, sets 'new_board' and 'moves'(needed for animation).
  * Returns NO_SLIDE if didn't slide */
