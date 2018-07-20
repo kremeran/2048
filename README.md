@@ -1,13 +1,13 @@
 # Build Instructions
-To make and run with GHS tools
-
----
+### To make and run with GHS tools
 
 `sudo apt-get install libncurses5-dev libncursesw5-dev`
 
 `make`
 
 `./2048 or multi 2048`
+
+### To make and run with gdb
 
 # Bug Hunt
 At one point, this program was a fully functional game of 2048 
