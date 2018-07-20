@@ -17,7 +17,7 @@ void board_start(Board *board)
 	board_add_tile(board, true);
 }
 
-void board_add_tile(Board *board, int only2)
+void board_add_tile(Board *board, char only2)
 {
 	Coord empty[BOARD_TILES];
 	int empty_n = 0;
