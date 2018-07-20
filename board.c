@@ -30,8 +30,8 @@ void board_add_tile(Board *board, bool only2)
 		val = (rand() % 10 == 1) ? 2 : 1;
 	}
 
-	for (int y = 0; y < BOARD_SIZE; y++) {
-		for (int x = 0; x < BOARD_SIZE; x++) {
+	for (int y = 0; y <= BOARD_SIZE; y++) {
+		for (int x = 0; x <= BOARD_SIZE; x++) {
 			if (board->tiles[y][x] == 0) {
 				empty[empty_n].x = x;
 				empty[empty_n].y = y;
