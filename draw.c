@@ -4,6 +4,7 @@
 #include <string.h>
 #include <time.h>
 #include "draw.h"
+#include <stdbool.h>
 
 /* sliding tile */
 typedef struct tile {
