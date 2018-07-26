@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <time.h>
-#include <stdbool.h>
 #include "draw.h"
 #include "board.h"
 #include "save.h"
