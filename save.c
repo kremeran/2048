@@ -6,7 +6,7 @@
 #include <sys/file.h>
 #include "common.h"
 #include "save.h"
-
+#include <stdbool.h>
 
 #define PATH_LEN 256
 
