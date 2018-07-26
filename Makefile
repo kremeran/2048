@@ -14,7 +14,7 @@ $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET) $(LDLIBS)
 
 clean:
-	@-rm -f $(TARGET) $(OBJ)
+	@-rm -f $(TARGET) $(OBJ) *.dbo *.dla *.dnm savegame
 
 main.o: board.h draw.h save.h common.h
 board.o: board.h common.h
