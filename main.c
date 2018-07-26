@@ -7,6 +7,7 @@
 #include "draw.h"
 #include "board.h"
 #include "save.h"
+#include <stdbool.h>
 
 static sigset_t all_signals;
 static Board board;
