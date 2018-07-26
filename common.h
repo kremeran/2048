@@ -1,6 +1,6 @@
 #ifndef COMMON_H
 #define COMMON_H
-
+#include <stdbool.h>
 #define BOARD_SIZE 4
 #define BOARD_TILES (BOARD_SIZE * BOARD_SIZE)
 
