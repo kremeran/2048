@@ -2,7 +2,7 @@ TARGET?=2048
 SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
 CC = gcc 
-CFLAGS?= -Xprologue_epilogue_hooks_noinline -DGHS_FEE_COLLECT -G -x86_64
+CFLAGS?= -Xprologue_epilogue_hooks_noinline -DGHS_FEE_COLLECT -G
 LDLIBS=-lncurses -lghseagle 
 DESTDIR?=/usr/local/bin
 
